@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+<!--Header-->   
+    <div class = "header">
+      <div class = "inner-header">
+      <h1 class = "title is-1">  
+    Mental Health Quiz</h1>
+    <h3 class = "subtitle is-3">Discover the mental illness that most matches your symptoms</h3>
+      </div>
+    </div>
+
+<!--Body -->
+    <div id="disclaimer" class="container has-text-centered">
+      <h1 class="title">**DISCLAIMER**</h1>
+      <div class="subtitle">THE RESULTS FROM THIS QUIZ ARE NOT MEANT AS AN OFFICIAL DIAGNOSIS AND SHOULD NOT BE USED AS ONE. ITS INTENTED USE IS TO NOTIFY THE QUIZ TAKER OF CONDITIONS AND DISORDERS THAT BEST MATCHES THEIR QUIZ INPUTS. PLEASE ENSURE THAT YOU REACH OUT TO PROPER MEDICAL PROFESSIONALS AND PROPER MENTAL HEALTH SERVICES TO CONFIRM OR DENY YOUR RESULTS. IN ANY EVENT, THE FOLLOWING PARTIES/MEMBERS ARE NOT LIABLE TO ANY DAMAGE, EXPENSE, AND/OR ANY CHARGES BROUGHT UPON THEM IN RESULT OF THE QUIZ: MARCELO CAMPOVERDE, LESLIE SAQUISILI, AND ARJUN CHHABRA. IF YOU AGREE AND UNDERSTAND THE FOLLOWING STATMENTS, PLEASE PRESS THE BUTTON I AGREE TO CONTINUE ON WITH THE QUIZ. 
+      </div>
+      <button id="disclaimerButton" class="button is-danger is-rounded is-inverted"">I agree</button>
+    </div>
+
+    <div id="results" class="container has-text-centered hidden">
+      <div><h1 class="title">Your Results</h1></div>
+      <div id="sentence" class="subtitle">Based on your quiz answers, your symptoms mostly match:
+      </div>
+      <div>
+        <h1 id="result" style="font-size:60px;"> Results </h1>
+      </div>
+      <div>
+      <a href="index.html">
+        <button class="button is-danger is-rounded is-inverted"">Retake quiz</button>
+      </a>
+      <a href="https://finalproject.ls53.repl.co/">
+        <button class="button is-danger is-rounded is-inverted"">Learn more about your results</button>
+      </a>
+      </div>
+      <div>
+        <h1 class="subtitle">Please ensure that you reach out to medical professionals to discuss your mental health and the results of this quiz. Once again, the results of this quiz are not an official diagnosis and should not be treated like one. Thank you!</h1>
+      </div>
+    </div>
+
+    <div id="welcomeQuiz" class="container hidden has-text-centered">
+      <h1 class="title">Welcome to the Quiz!</h1>
+      <img src="https://pbs.twimg.com/profile_images/1276633870117605376/7fkkDsQm_400x400.jpg">
+    </div>
+    <div id="questions" class="order container has-text-centered">
+      
+    </div>
+
+
+      
+    <div id="questionsBank" class="order container has-text-centered">
+      <div id="General">
+<!-- Question 1 -->
+      <section id="gen-0" class="section hidden">
+        <h1 class="title"> Do you experience feelings of sadness, emptiness, or negative thoughts?</h1>
+        <div class="container">
+          <div class="columns">
+            <div id="g0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="g0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  <!--Question 2 -->
+      
+      <section id="gen-1" class="section hidden">
+        <h1 class="title"> Do you receive either too much sleep or barely any sleep?</h1>
+        <div class="container">
+          <div class="columns">
+            <div id="g1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="g1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 3 -->
+        
+      <section id="gen-2" class="section hidden">
+        <h1 class="title"> Do you struggle with food?</h1>
+        <div class="container">
+          <div class="columns">
+            <div id="g2-0"class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="g2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 4 -->
+    
+      <section id="gen-3" class="section hidden">
+        <h1 class="title"> Based on the BMI index, are you underweight, overweight/obese, or average?</h1>
+        <div class="container">
+          <div class="columns">
+            <div id="g3-0" class="hover column has-text-centered">
+              <div class="subtitle">Underweight</div>
+            </div>
+            <div id="g3-1" class="hover column has-text-centered">
+                <div class="subtitle">Overweight/Obese</div>
+            </div>
+            <div id="g3-2" class="hover column has-text-centered">
+                <div class="subtitle">Average</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 5 -->
+    
+      <section id="gen-4" class="section hidden">
+        <h1 class="title"> Do you struggle with social situations?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="g4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="g4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+  <!--Question 6 -->
+    
+      <section id="ptsd-0" class="order1 section hidden">
+        <h1 class="title"> Do you experience nightmares or recurrent unwanted memories?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ptsd0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ptsd0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 7 -->
+    
+      <section id="ptsd-1" class="section hidden">
+        <h1 class="title">Do you experience problems in memory?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ptsd1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ptsd1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 8 -->
+    
+      <section id="ptsd-2" class="section hidden">
+        <h1 class="title">Do you experience issues socially?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ptsd2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ptsd2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 9 -->
+    
+      <section id="ptsd-3" class="section hidden">
+        <h1 class="title">Do you experience trouble sleeping and/or concentrating?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ptsd3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ptsd3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 10 -->
+    
+      <section id="depression-0" class="section hidden">
+        <h1 class="title">Do you experience negative or suicidal thoughts?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="d0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="d0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 11 -->
+    
+      <section id="depression-1" class="section hidden">
+        <h1 class="title">Do you fixate on past failures or self-blame?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="d1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="d1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 12 -->
+    
+      <section id="depression-2" class="section hidden">
+        <h1 class="title">Are you frequently frustrated, irritable, or angry?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="d2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="d2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 13 -->
+    
+      <section id="depression-3" class="section hidden">
+        <h1 class="title">Are your periods of extreme sadness paired with extreme happiness?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="d3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="d3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 14 -->
+    
+      <section id="depression-4" class="section hidden">
+        <h1 class="title">Do your periods of extreme sadness occur mostly in the late fall and winter seasons?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="d4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="d4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 15 -->
+    
+      <section id="adhd-0" class="section hidden">
+        <h1 class="title"> Are you easily distracted or have difficulty concentrating?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="a0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="a0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 16 -->
+    
+      <section id="adhd-1" class="section hidden">
+        <h1 class="title"> Do you fidget a considerable amount?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="a1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="a1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 17 -->
+    
+      <section id="adhd-2" class="section hidden">
+        <h1 class="title"> Are you constantly daydreaming?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="a2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="a2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 18 -->
+    
+      <section id="adhd-3" class="section hidden">
+        <h1 class="title">Do you make careless mistakes and/or make unnecessary risks?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="a3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="a3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 19 -->
+    
+      <section id="adhd-4" class="section hidden">
+        <h1 class="title">Do you find it difficult to get along with others and/or take turns with others?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="a4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="a4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 20 -->
+    
+      <section id="schizophrenia-0" class="section hidden">
+        <h1 class="title">Do you suffer from hallucinations and/or delusions?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sch0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sch0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 21 -->
+    
+      <section id="schizophrenia-1" class="section hidden">
+        <h1 class="title">Do you lack the ability to experience pleasure?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sch1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sch1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 22 -->
+    
+      <section id="schizophrenia-2" class="section hidden">
+        <h1 class="title">Do you experience crawling on or beneath your skin?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sch2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sch2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 23 -->
+    
+      <section id="schizophrenia-3" class="section hidden">
+        <h1 class="title">Do you lose interest in everyday activities?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sch3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sch3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 24 -->
+    
+      <section id="schizophrenia-4" class="section hidden">
+        <h1 class="title">Do you experience disorganized thinking, speech, and/or motor behavior?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sch4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sch4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 25 -->
+    
+      <section id="autism-0" class="section hidden">
+        <h1 class="title">Do you take issue with understanding sarcasm?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="au0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="au0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 26 -->
+    
+      <section id="autism-1" class="section hidden">
+        <h1 class="title">Do you get anxious when change occurs in your routine?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="au1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="au1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 27 -->
+    
+      <section id="autism-2" class="section hidden">
+        <h1 class="title">Do you find it hard to express how you feel to others? </h1>
+        <div class="container">
+          <div class="columns">
+           <div id="au2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="au2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 28 -->
+    
+      <section id="autism-3" class="section hidden">
+        <h1 class="title">Do you find it hard to understand what others are thinking or feeling?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="au3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="au3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 29 -->
+    
+      <section id="autism-4" class="section hidden">
+        <h1 class="title">Do you find it hard to make friends?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="au4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="au4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 30 -->
+    
+      <section id="autism-5" class="section hidden">
+        <h1 class="title">Do you prefer to be alone?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="au5-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="au5-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 31 -->
+    
+      <section id="bad-0" class="section hidden">
+        <h1 class="title">Do you have periods of extreme happiness and euphoria?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 32 -->
+    
+      <section id="bad-1" class="section hidden">
+        <h1 class="title">Do you have periods of depression or extreme sadness?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 33 -->
+    
+      <section id="bad-2" class="section hidden">
+        <h1 class="title">In these euphoric periods, do you feel highly confident, energetic, and easily distracted? </h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 34 -->
+    
+      <section id="bad-3" class="section hidden">
+        <h1 class="title">Do you tend to make poor decisions during these highs? For example going on a shopping spree, taking risks, or making impulsive decisions?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+      </section>
+  <!--Question 35 -->
+    
+      <section id="bad-4" class="section hidden">
+        <h1 class="title">In periods of depression or extreme sadness, do you experience a loss of interest or feeling of pleasure in any activity?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 36 -->
+      
+<!--       <section id="bad-5" class="section hidden">
+        <h1 class="title">Do you experience negative or suicidal thoughts?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad5-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad5-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+  <!--Question 37 -->
+        
+      <section id="bad-6" class="section hidden">
+        <h1 class="title">Do you experience feelings of worthlessness or inappropriate guilt?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad6-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad6-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 38 -->
+<!--       <section id="bad-7" class="section hidden">
+        <h1 class="title">Do you get too much or too little sleep?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bad7-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bad7-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+  <!--Question 39 -->
+      <section id="anorexia-0" class="section hidden">
+        <h1 class="title">Do you limit your food consumption because you fear gaining weight?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ano0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ano0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 40 -->
+      <section id="anorexia-1" class="section hidden">
+        <h1 class="title">Do you feel cold all the time?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ano1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ano1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question  41 -->
+      <section id="anorexia-2" class="section hidden">
+        <h1 class="title">Are you severely constipated?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ano2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ano2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 42 -->
+      <section id="anorexia-3" class="section hidden">
+        <h1 class="title">Do you have dry and yellowish skin?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="ano3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="ano3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 43 -->
+      <section id="bulimia-0" class="section hidden">
+        <h1 class="title">Do you eat unusually large amounts of food?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bul0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bul0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 44 -->
+      <section id="bulimia-1" class="section hidden">
+        <h1 class="title">Do you frequently use laxatives, excessive exercise, or self-induced vomiting because of your eating habits?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bul1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bul1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 45 -->
+      <section id="bulimia-2" class="section hidden">
+        <h1 class="title">Do you have a chronically inflamed and sore throat?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bul2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bul2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 46 -->
+      <section id="bulimia-3" class="section hidden">
+        <h1 class="title">Do you experience acid reflux, tooth decay, and/or teeth sensitivity?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bul3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bul3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 47 -->
+      <section id="bulimia-4" class="section hidden">
+        <h1 class="title">Do you suffer from severe dehydration and electrolyte imbalance?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bul4-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bul4-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 48 -->
+      <section id="binge-0" class="section hidden">
+        <h1 class="title">Do you eat unusually large amounts of food in a specific amount of time and/or time period?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bin0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bin0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 49 -->
+      <section id="binge-1" class="section hidden">
+        <h1 class="title">Do you eat even when you are full or not hungry?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bin1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bin1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 50 -->
+      <section id="binge-2" class="section hidden">
+        <h1 class="title">Do you eat when you are uncomfortably full?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bin2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bin2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 51 -->
+      <section id="binge-3" class="section hidden">
+        <h1 class="title">Do you eat alone to avoid embarrassment?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="bin3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="bin3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 52 -->
+      <section id="arfid-0" class="section hidden">
+        <h1 class="title">Do you have a lack of appetite or low interest in food?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="arf0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="arf0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 53 -->
+      <section id="arfid-1" class="section hidden">
+        <h1 class="title"> Do you experience extreme weight loss?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="arf1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="arf1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--Question 54 -->
+      <section id="arfid-2" class="section hidden">
+        <h1 class="title">Do you have a limited range of tolerable foods?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="arf2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="arf2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--Question 55 -->
+      <section id="arfid-3" class="section hidden">
+        <h1 class="title">Do you experience an upset stomach, abdominal pain, or gastrointestinal issues without any known cause?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="arf3-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="arf3-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--Question 56 -->
+      <section id="sad-0" class="section hidden">
+        <h1 class="title">Do have difficulty making eye contact with people you do not know?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sad0-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sad0-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--Question 57 -->
+      <section id="sad-1" class="section hidden">
+        <h1 class="title">Do you fear that people judge you negatively?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sad1-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sad1-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--Question 58 -->
+      <section id="sad-2" class="section hidden">
+        <h1 class="title">Do you experience stomaches, sweating, trembling, or a racing heart when in a social situation?</h1>
+        <div class="container">
+          <div class="columns">
+           <div id="sad2-0" class="yesHover column has-text-centered">
+              <div class="subtitle">Yes</div>
+            </div>
+            <div id="sad2-1" class="noHover column has-text-centered">
+                <div class="subtitle">No</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+      
+
+<!--     <footer
+      class="footer has-background-grey-darker notification has-text-danger-light mt-5 mb-0"
+    >
+      <div class="content has-text-centered">
+        <p class="subtitle">Thanks for playing!</p>
+      </div>
+    </footer> -->
+
+    <script src="script.js" type="text/javascript" defer></script>
+  </body>
+</html>
